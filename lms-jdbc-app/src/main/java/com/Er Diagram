@@ -1,0 +1,11 @@
+```mermaid
+erDiagram
+    ADMIN ||--o{ JOB : "manages"
+    JOB ||--o{ CANDIDATE : "receives_applications"
+    CANDIDATE ||--o{ INTERVIEW : "undergoes"
+    INTERVIEWER ||--o{ INTERVIEW : "conducts"
+    CANDIDATE ||--|| ONBOARDING : "starts"
+    CANDIDATE ||--o{ CANDIDATE_SKILL : "possesses"
+    CANDIDATE ||--o{ CANDIDATE_EXPERIENCE : "has_worked_at"
+    CANDIDATE ||--o{ CANDIDATE_COURSE : "enrolls_in"
+    COURSE ||--o{ CANDIDATE_COURSE : "teaches"
